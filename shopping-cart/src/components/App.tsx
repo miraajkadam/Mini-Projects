@@ -1,6 +1,6 @@
 import axios, { type AxiosResponse } from 'axios'
 import { useEffect, useReducer } from 'react'
-import ProductsListing from './ProductsListing'
+import Listing from './product/Listing'
 
 const PRODUCTS_API_URL = 'https://fakestoreapi.com/products'
 export type Product = {
@@ -75,7 +75,9 @@ const App = () => {
       } catch (err: any) {
         const error = err as Error
 
-        console.error(`Error occured while fetching products, ${error.message}`)
+        console.error(
+          `Error occurred while fetching products, ${error.message}`
+        )
       }
     }
 
@@ -85,7 +87,7 @@ const App = () => {
   // console.log(state)
   const { products, cart } = state
 
-  return <ProductsListing products={products} />
+  return <Listing products={products} />
 }
 
 export default App

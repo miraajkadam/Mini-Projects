@@ -1,20 +1,20 @@
 import { FC } from 'react'
-import { type Product } from './App'
-import Container from './elements/Container'
-import Text from './elements/Text'
+import Container from '../dom/Container'
+import Text from '../dom/Text'
+import { type Product } from '../App'
 
 type Props = {
   product: Product
 }
 
-const ProductDetail: FC<Props> = ({ product }) => (
+const Detail: FC<Props> = ({ product }) => (
   <Container
     style={{
       width: '200px',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      border: '1px solid'
+      border: '1px solid',
     }}
   >
     <img
@@ -30,4 +30,4 @@ const ProductDetail: FC<Props> = ({ product }) => (
   </Container>
 )
 
-export default ProductDetail
+export default Detail
